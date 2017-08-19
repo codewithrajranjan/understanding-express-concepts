@@ -9,5 +9,10 @@ app.set('secretKey','12345');
 var secretKey = app.get('secretKey');
 
 
-console.log(secretKey);
+
+// creating an express http server
+app.listen(3000,function(){
     
+    console.log("Server succssfully started");
+
+});
