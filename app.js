@@ -11,8 +11,13 @@ var secretKey = app.get('secretKey');
 
 // create get endpoint
 app.get('/user',function(req,res){
-
-    res.json({"name":"Hi Selftuts"});
+    
+    var obj = {
+        "ip" : req.ip,
+        "method" : req.method,
+        "headers" : req.headers
+    };
+    res.json(obj);
 
 });
 
