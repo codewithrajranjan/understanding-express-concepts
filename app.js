@@ -12,12 +12,9 @@ var secretKey = app.get('secretKey');
 // create get endpoint
 app.get('/user',function(req,res){
     
-    var obj = {
-        "ip" : req.ip,
-        "method" : req.method,
-        "headers" : req.headers
-    };
-    res.json(obj);
+    var queryParameter = req.query;
+    console.log(queryParameter.age);
+    res.json(queryParameter);
 
 });
 
