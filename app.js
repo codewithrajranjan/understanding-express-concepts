@@ -10,11 +10,10 @@ var secretKey = app.get('secretKey');
 
 
 // create get endpoint
-app.get('/user',function(req,res){
-    
-    var queryParameter = req.query;
-    console.log(queryParameter.age);
-    res.json(queryParameter);
+app.get('/user/name/:userName/age/:userAge',function(req,res){
+   
+    var resourceParams = req.params;
+    res.json(resourceParams);
 
 });
 
